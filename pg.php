@@ -1,6 +1,9 @@
 <?php
 class PG {
   public static function main() {
+    if (!extension_loaded("pgsql")) {
+      dl("pgsql.so");
+    }
     $con=pg_connect("host=127.0.0.1 dbname=test user=postgres");
     $q="DROP TABLE IF EXISTS things";
     pg_query($con, $q);
