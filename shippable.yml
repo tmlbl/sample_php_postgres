@@ -9,7 +9,7 @@ services:
 before_script: 
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
-  - psql -c 'create database if not exists test;' -U postgres
+  - psql -c 'CREATE DATABASE test;' -U postgres
 
 script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage test.php
