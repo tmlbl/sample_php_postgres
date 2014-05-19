@@ -1,15 +1,15 @@
 <?php
-class SQL {
+class PG {
   public static function main() {
-    $con=mysqli_connect("127.0.0.1","shippable","","test");
+    $con=pg_connect("host=127.0.0.1 dbname=test user=postgres");
     $q="DROP TABLE IF EXISTS things";
-    mysqli_query($con, $q);
+    pg_query($con, $q);
     $q="CREATE TABLE things (name varchar(20))";
-    mysqli_query($con, $q);
+    pg_query($con, $q);
     $q="INSERT INTO things(name) VALUES('Dre')";
-    mysqli_query($con, $q);
+    pg_query($con, $q);
     $q="SELECT * FROM things";
-    return mysqli_query($con, $q);
+    return pg_query($con, $q);
   }
 }
 ?>

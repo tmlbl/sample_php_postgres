@@ -1,4 +1,4 @@
-sample_php_mysql
-================
+sample_postgres_mysql
+=====================
 
 Uh oh!
