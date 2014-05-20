@@ -1,4 +1,4 @@
-sample_postgres_mysql
-=====================
+PHP PostgreSQL Example
+======================
 
 Uh oh!
